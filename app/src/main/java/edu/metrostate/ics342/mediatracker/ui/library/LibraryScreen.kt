@@ -1,9 +1,12 @@
 package edu.metrostate.ics342.mediatracker.ui.library
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.MoreVert
@@ -31,8 +34,8 @@ fun LibraryScreen(
 ) {
     val items     by viewModel.libraryItems.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
+    val selectedStatus by viewModel.filterState.collectAsState()
 
-    var selectedStatus by remember { mutableStateOf(LibraryStatus.WANT_TO) }
     var selectedType   by remember { mutableStateOf("all") }
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -41,7 +44,8 @@ fun LibraryScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
+                .padding(horizontal = 16.dp, vertical = 8.dp)
+                .horizontalScroll(state= rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             listOf(
@@ -69,7 +73,7 @@ fun LibraryScreen(
                     shape    = SegmentedButtonDefaults.itemShape(
                         index = index, count = LibraryStatus.values().size),
                     selected = selectedStatus == status,
-                    onClick  = { selectedStatus = status },
+                    onClick  = {  viewModel.updateFilter(status)},
                     label    = { Text(stringResource(status.labelRes)) }
                 )
             }
@@ -114,6 +118,7 @@ fun LibraryScreen(
         LazyColumn(
             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 4.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
+            // horizontalArrangement = Arrangement.spacedBy(32.dp)
         ) {
             items(filteredItems, key = { it.mediaId }) { item ->
                 LibraryItemCard(
