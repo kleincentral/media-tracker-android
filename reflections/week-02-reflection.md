@@ -1,7 +1,7 @@
-# Week {{N}} Reflection
+# Week 2 Reflection
 
-**Name:**
-**Date:**
+**Name:** Mark Klein
+**Date:** 5/28/2026
 
 ---
 
@@ -10,7 +10,7 @@
 <!-- Paste a link to your commits for this week. The easiest way: go to your repo on GitHub,
      click "commits", and copy the URL after filtering by your name or branch. -->
 
-**Link:**
+**Link:** https://github.com/kleincentral/media-tracker-android/pull/3/commits
 
 ---
 
@@ -20,32 +20,28 @@
      Part 1 is the link — I will verify the review exists on GitHub.
      Part 2 is your written assessment — what you actually looked at and what you found. -->
 
-**Reviewed:** *(pod mate's name)*
-**Link to my review:**
+**Reviewed:** Brian Willems
+**Link to my review:** https://github.com/BrianWill2026/media-tracker-android/pull/3/changes/c76fb0d60a2d6876e9625fc017ebef58067a3b62#diff-1fac8ea6c8e9281a2263b6e7245136ae3be87d04e60cb49269536aeb6947595d
 
 ### What I Looked At
 
-<!-- Walk through the code you reviewed. What was the PR trying to do? Which files or
-     functions did you focus on? -->
+I mostly focused in on the LibraryScreen view, as that was the file which was changed most.
 
 ### What I Noticed
 
-<!-- Be specific. Did you spot a potential bug? A pattern that could cause problems? Something
-     done well that you want to call out? "I looked at the ViewModel and everything seemed fine"
-     is not specific enough. Name the thing you noticed and explain why it matters. -->
+What I noticed was how some of the bug reports that people would leave were really intended features for the moment which I thought was really interesting. Mostly because although from the viewpoint of the developer it was intentional the user thought it was a mistake.
 
 ### Comments I Left
 
 <!-- Briefly summarize the comments you left on the PR. If you left a positive comment,
      say what it was. If you left a suggestion, say what you suggested and why. -->
+I encouraged the user about their use of comments, and commended them on their work to correct the view model.
 
 ---
 
 ## One Thing I Understood More Deeply
 
-<!-- Be specific. Don't write "I learned about ViewModels." Write what specifically clicked —
-     what was confusing before, what made it make sense, and how you'd explain it to someone else.
-     There are no wrong answers here. -->
+I expanded my knowledge on how viewModels work, specifically around their states.
 
 ---
 
@@ -53,6 +49,7 @@
 
 <!-- Be honest. This is the most useful part of the reflection for me — it tells me where to
      spend more time in class. You will not lose points for being confused. -->
+I still don't know to write Kotlin code really, I'm following around with the lectures but its mostly me coping what it is said verses understanding it.
 
 ---
 
